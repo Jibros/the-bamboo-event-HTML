@@ -54,12 +54,12 @@ $(function() {
             }
         });
         quizSwiper.init();
-
-        // 퀴즈 목록 클릭
-        $(document).on("click", ".quiz__list > li", function() {
-            slideClickFunc(this);
-        })
     }
+
+    // 퀴즈 목록 클릭
+    $(document).on("click", ".quiz__list > li", function() {
+        slideClickFunc(this);
+    });
 
     // 퀴즈 선택 시 액션
     // 질문지 선택 -> 선택한 탭 활성화(각 선택값 저장) -> 슬라이드 추가 -> 다음장 이동, 마지막 장 도달 시 버튼 노출(이벤트 참여, 리셋)
@@ -105,8 +105,8 @@ $(function() {
                                 $(".quiz__btn").addClass("on");
                             })
                         }, 2000);
-                    })
-                })
+                    });
+                });
             } else { // 선택 변경 대입
                 totalPoint[QUIZ_QUEST_ARR.length - 1] = currPoint;
             }
