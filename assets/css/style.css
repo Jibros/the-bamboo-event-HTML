@@ -450,7 +450,7 @@
   width: 100%;
   margin-bottom: 3.5rem;
   border-radius: 3.6rem;
-  border: 0.8rem solid #78413e;
+  border: 0.8rem solid #3aa348;
   background-color: #fff;
   background-clip: padding-box;
 }
@@ -557,7 +557,7 @@
   width: 100%;
   margin-bottom: 3.5rem;
   border-radius: 3.6rem;
-  border: 0.8rem solid #78413e;
+  border: 0.8rem solid #3aa348;
   background-color: #fff;
   background-clip: padding-box;
 }
@@ -662,7 +662,7 @@
   width: 100%;
   margin-bottom: 3.5rem;
   border-radius: 3.6rem;
-  border: 0.8rem solid #78413e;
+  border: 0.8rem solid #2c934d;
   background-color: #fff;
   background-clip: padding-box;
 }
@@ -701,24 +701,38 @@
   top: 0;
   left: 0;
 }
+.layer .layer__body .privacybox .form_container .info_msg .block-ipt {padding:2rem 0 3rem 0;}
+.layer .layer__body .privacybox .form_container .info_msg .block-ipt label {color:#756e6e;font-size:3rem;}
+.layer .layer__body .privacybox .form_container .info_msg .block-ipt .ipt-chkbox {width:3rem;height:3rem;margin-left:0.5rem;}
 .layer .layer__body .privacybox .form_row {
-  display: block;
-  position: relative;
+  display: block;padding-left:31%;
+  position: relative;min-height:9rem;margin-bottom:2rem;
 }
 .layer .layer__body .privacybox .form_row + .form_row {
-  margin-top: 24px;
+
 }
 .layer .layer__body .privacybox .form_row.form_row-option {
   margin-top: 40px;
 }
 .layer .layer__body .privacybox .form_row .tx_label {
   display: block;
-  margin-bottom: 4px;
-  font-size: 13px;
-  color: #000;
-  line-height: 20px;
-  letter-spacing: -0.4px;
+  position:absolute;
+  top:0;
+  left:0;
+  width:28.5%;
+  background:#c4e3ce;
+  text-align:center;
+  font-size:4rem;
+  color:#256e37;
+  letter-spacing:-0.2rem;
+  height:9rem;
+  line-height:9rem;
 }
+.layer .layer__body .privacybox .form_row .ipt-text {border:1px solid #bebebe;height:9rem;font-size:5rem;margin-top:1rem;display:block;width:100%;box-sizing:border-box;text-align:left;padding:0 5%;}
+.layer .layer__body .privacybox .form_row .ipt-text:first-child {margin:0;}
+.layer .layer__body .privacybox .form_row .ipt-text-zip {width:35%;text-align:center;font-size:4rem;}
+.layer .layer__body .privacybox .form_row .ipt-text-zip::placeholder {font-size:4rem;}
+.layer .layer__body .privacybox .form_row .tx_msg {font-size:2.5rem;color:#756e6e;margin-top:1rem;}
 .layer .layer__body .privacybox .form_row .tx_label .ico_q {
   display: inline-block;
   position: relative;
@@ -759,11 +773,11 @@
   display: block;
   margin-top: 6px;
   font-size: 11px;
-  color: #ef3839;
+  color: #2c934d;
   letter-spacing: -0.3px;
   line-height: 1;
-}
-.layer .layer__body .privacybox .form_row .tx_correct {
+}_
+.layer .layer__body .privacybox .form_row .txcorrect {
   display: block;
   margin-top: 6px;
   font-size: 11px;
@@ -894,9 +908,9 @@
   font-weight: bold;
 }
 .layer .layer__body .privacybox .btn_row {
-  display: block;
-  margin-top: 16px;
+  display: block;text-align:center;
 }
+.layer .layer__body .privacybox .form_row+.btn_row {margin-top:6rem;}
 .layer .layer__body .privacybox .btn_row .btn-joinus {
   display: block;
   width: 100%;

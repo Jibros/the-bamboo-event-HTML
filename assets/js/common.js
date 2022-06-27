@@ -1,7 +1,7 @@
 $(function(){
 
     // 유의사항 레이어 열기/닫기
-    const BTN_LAYER_OPEN = $("#btnTest"), // 열기 버튼
+    const BTN_LAYER_OPEN = $(".btn-open "), // 열기 버튼
           BTN_LAYER_CLOSE = ".layer__dimmed, .btn--close, .lay__dimmed",  // 닫기 버튼
           DIMMED_DOM = "<div class='lay__dimmed'></div>",
           DIMMEDCLASS = ".lay__dimmed";
@@ -14,6 +14,7 @@ $(function(){
         
         $("body").append(DIMMED_DOM)
         $(DIMMEDCLASS).addClass("show")
+		$(".layer").hide();
         $("#"+layId).fadeIn(100,function(){
             $(this).addClass("on")
 
@@ -141,7 +142,8 @@ $(function(){
         totalPoint = []
         $(".quiz__list > li").removeClass("on")
         $(".quiz__result").removeClass("on")
-        quizSwiper.slideTo(0, 0)
+        quizSwiper.slideTo(0, 0);
+		$(".quiz__swiper, .quiz__tit").show();
     }
     function clearEvtFunc(){
         $(".quiz__btn").removeClass("on")
