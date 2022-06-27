@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/************************************************************************
+ * 파일명 : reset.css
+ * 설명 : Reset CSS
+************************************************************************/
+
+@import url("webfont.css");
+
+*{margin:0;padding:0}
+*,:after,:before {box-sizing:inherit}
+html,body{width:100%;height:100%;margin:0;padding:0;font:10px/1 "Noto Sans KR","애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","돋움",dotum,sans-serif;vertical-align:middle;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;}
+html {/* overflow-y:scroll; */background:#fff;font-size:10px;box-sizing: border-box;touch-action: manipulation;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body {overflow-x:hidden;width:100%}
+dl,ul,ol,menu,li{list-style:none}
+address,caption,cite,code,dfn,em,var{ font-style:normal;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,main { display:block}
+blockquote,q { quotes:none}
+blockquote:before,blockquote:after,q:before,q:after { content:"";content:none}
+hr{display:none}
+fieldset,img{border:none}
+legend,caption{display:block;overflow:hidden;position:absolute;text-indent:-9999px;top:-9999px;font-size:0;width:1px;height:1px;left:-9999px;line-height:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {font-weight:normal;margin:0;padding:0}
+table{border-collapse:collapse;word-break:break-all;font-size:12px;border-spacing:0;empty-cells:show}
+
+/* Input n Textarea */
+textarea{resize:none}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color:#aaa;}
+input:-moz-placeholder,
+textarea:-moz-placeholder {color:#aaa;}
+input::-moz-placeholder,
+textarea::-moz-placeholder {color:#aaa;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color:#aaa;}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {color:transparent;}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {color:transparent;}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {color:transparent;}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {color:transparent;}
+
+.hide{display:none}  /* none */
+.blind{display:block;overflow:hidden;position:absolute;text-indent:-9999px;top:-9999px;font-size:0;width:1px;height:1px;left:-9999px;line-height:0} /* hide */
+img {width:100%;height:auto;vertical-align:top}
+.sr-only {position:absolute;width:1px;height:1px;overflow:hidden;padding:0;margin:-1px;border:0;clip:rect(0,0,0,0);}
+
+/* Link Css */
+a{cursor:pointer;color:#666666}
+a:link,a:visited,a:active{text-decoration:none}
+/* a:hover{text-decoration:underline}
+a:active{background-color:transparent} */
+
+/* form */
+input,select,textarea,button,label{ font:10px/1.4 "Noto Sans KR","애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",-apple-system,system-ui,BlinkMacSystemFont,"돋움",dotum,sans-serif;vertical-align:middle;color:#666;outline:none}
+input::-ms-clear {display:none}
+button{border:0 none;cursor:pointer}
+button:disabled {cursor:default}
+
+/* border-box, clearfix */
+.border-box,
+.border-box *,
+.border-box *:before,
+.border-box *:After {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after {content:"";display:block;clear:both;zoom:1;}
+
+/* 페이지 스피너 */
+.pageLoader {position:fixed;top:0;bottom:0;left:0;right:0;z-index:1000}
+.pageLoader .dimmed {display:block;position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;background-color:rgba(0,0,0,.3)}
+/* 스텝 이동 간 스피너 노출 */
+.char_load {position:absolute;top:0;bottom:0;left:0;right:0;z-index:1000}
+.char_load .dimmed {display:block;position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;background-color:rgba(0,0,0,.3)}
+.sk-cube-grid {position:absolute;top:50%;left:50%;z-index:10;transform:translate(-50%, -50%);width: 40px;height: 40px;}
+.sk-cube-grid .sk-cube {width: 33%;height: 33%;background: #03bbf4;float: left;-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;}
+.sk-cube-grid .sk-cube1 {-webkit-animation-delay: 0.2s;animation-delay: 0.2s;}
+.sk-cube-grid .sk-cube2 {-webkit-animation-delay: 0.3s;animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {-webkit-animation-delay: 0.4s;animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {-webkit-animation-delay: 0.1s;animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {-webkit-animation-delay: 0.2s;animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {-webkit-animation-delay: 0.3s;animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {-webkit-animation-delay: 0s;animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {-webkit-animation-delay: 0.1s;animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {-webkit-animation-delay: 0.2s;animation-delay: 0.2s; }
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+    } 35% {
+        -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1); 
+    }
+}
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+    } 35% {
+        -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1);
+    } 
+}

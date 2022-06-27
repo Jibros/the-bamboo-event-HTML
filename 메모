@@ -1,0 +1,5 @@
+레이어는 하단에 있습니다.
+
+- 퀴즈 레이어 : id="layQuiz"
+- 공유 레이어 : id="layShare"
+- 개인정보 동의 레이어 : id="layPrivacyAgree"
