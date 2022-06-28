@@ -33,7 +33,7 @@
         <div class="vodbox">
             <div class="inner">
 				<img src="/assets/images/vodplay_top.jpg" alt="지금까지 15년간 지켜온 밤부베베의 진심을 담은 영상을 확인하고 감사의 마음을 담은 이벤트도 참여해보세요!">
-                
+
                 <div class="vodbox__rect">
                     <iframe class="vodframe" src="https://www.youtube.com/embed/cVDsZMHPNCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -43,7 +43,7 @@
 					<div class="appear-obj vertical"><img src="/assets/images/vodplay_bottom_obj1.png" alt="밤부베베도, 엄마도, 아이를 사랑하는 마음은 같으니까"></div>
 				</div>
 
-                
+
             </div>
         </div>
 
@@ -75,7 +75,7 @@
 						<p>이벤트 기간은 7월 4일 목요일부터 7월 31일 일요일까지</p>
 						<p>당첨자 발표는 8월 5일 금요일</p>
 					</div>
-				</div>				
+				</div>
 
                 <button type="button" id="btnTest" class="btn-open btn--test" data-laypop-id="layQuiz"><img src="/assets/images/event1_btn.jpg" alt="엄마유형 테스트 시작!"></button>
             </div>
@@ -94,7 +94,7 @@
 						<div class="appear-obj vertical"><img src="/assets/images/event2_tit_obj4.png" alt="가장 고마운 친언니, 고마운 사람이 많지만 그래도 제 자신이요."></div>
 					</div>
 				</div>
-               
+
                 <div class="sr-only">
                     <h2>EVENT02. 밤부베베로 진심을 전해보세요</h2>
                     <p>
@@ -106,7 +106,7 @@
                     </p>
                     <p>초간단 엄마유형 테스트! 한 번 해볼까요?</p>
                 </div>
-				
+
 				<div class="evt--2-2">
 					 <div class="object-wrap">
 						<img src="/assets/images/event2_gift_bg.png" alt="">
@@ -116,9 +116,9 @@
                 <div class="sr-only">
                     <p>
                         가족, 친구, 지인 등 감사한 분에게
-                        진심을 전해보세요 
-                        추첨을 통해 100분께 
-                        마음손수건 3매 세트를 드려요! 
+                        진심을 전해보세요
+                        추첨을 통해 100분께
+                        마음손수건 3매 세트를 드려요!
                     </p>
                     <em>SPECIAL GIFT</em>
                     <p>따뜻한 느낌의 하트와 드로잉 자수가 담겨있어 감사한 분들에게 진심을 전하기 좋아요</p>
@@ -132,7 +132,7 @@
                         <input type="text" class="ipt--txt" placeholder="잘 키워주셔서 감사합니다.">
                         <button type="button" class="btn-open  btn--submit" data-laypop-id="layPrivacyAgree"><img src="/assets/images/event2_submit.png" alt="진심을 담아 꾹!"></button>
                     </form>
-                    
+
                     <div class="reply__list">
                         <ul>
                             <!-- 반복 -->
@@ -313,10 +313,10 @@
                             <ol class="tx_msg">
                                 <li>개인정보 수집/이용 목적<br>
                                     밤부베베 15주년 이벤트 경품 발송 목적</li>
-                                
+
                                 <li>개인정보 수집 항목<br>
                                     : 이름, 휴대폰번호, 주소</li>
-                                
+
                                 <li>개인정보의 보유/이용 기간<br>
                                     수집한 개인정보는 수집 시로부터 3개월간 이용하며, 내역 관리를 위해 추가 1개월을 보관한 후 폐기합니다.<br>
                                     다만, 보유 및 이용기간 동안 개인정보 이용 동의에 철회하시는 경우 그 즉시 폐기합니다.<br>
@@ -338,15 +338,15 @@
 
                         <div class="form_row">
                             <label class="tx_label" for="b">휴대폰번호</label>
-                            
+
                             <input type="tel" id="b" class="ipt-text" placeholder="" value="" required>
                             <p class="tx_msg">※띄어쓰기없이 숫자만 작성해주세요</p>
                         </div>
 
                         <div class="form_row">
-                            <label class="tx_label" for="mem_post">주소</label>
-                            <input type="text" id="mem_post" class="ipt-text ipt-text-zip" placeholder="" value="우편번호" required readonly  onclick="findAddr()"  />
-                            <input type="text" id="mem_addr" class="ipt-text" placeholder="" value="" required  readonly />
+                            <label class="tx_label" for="mem_addr">주소</label>
+                            <input type="text" id="mem_post" class="ipt-text ipt-text-zip" placeholder="" value="우편번호" required readonly style="display:none;" />
+                            <input type="text" id="mem_addr" class="ipt-text" placeholder="" value="" required readonly onclick="findAddr()" />
                             <input type="text" id="mem_addr2" class="ipt-text" placeholder="" value="" />
                             <input type="text" id="mem_addr_ex" class="ipt-text" placeholder="" value="" />
                         </div>
@@ -402,7 +402,7 @@
                     }
                     // 조합된 참고항목을 해당 필드에 넣는다.
                     document.getElementById("mem_addr_ex").value = extraAddr;
-                
+
                 } else {
                     document.getElementById("mem_addr_ex").value = '';
                 }
@@ -430,7 +430,7 @@
 				if( bottom_of_window > bottom_of_element ){
 					$(this).addClass("active");
 				}
-			}); 
+			});
 		});
 			if (window.innerWidth <= 375){
 				$(".vodbox .appear-obj").addClass("active");
