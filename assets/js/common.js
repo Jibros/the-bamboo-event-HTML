@@ -139,7 +139,10 @@ $(function() {
         console.log("클리어 " + totalPoint);
         $(".quiz__list > li").removeClass("on");
         $(".quiz__result").removeClass("on");
-        quizSwiper.removeAllSlides();
+
+        if(quizSwiper) {
+            quizSwiper.removeAllSlides();
+        }
     }
 
     // 질문지 섞기
