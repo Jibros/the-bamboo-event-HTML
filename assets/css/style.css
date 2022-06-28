@@ -24,8 +24,9 @@
 }
 #header {
   width: 100%;
+  height: 52.8rem;
   background: url("/assets/images/pattern_visual.jpg") top center repeat-x;
-  background-size: contain;
+  background-size: 1rem;
 }
 #header .header__logo {
   font-size: 0;
@@ -119,6 +120,7 @@
   background-size: 27.5rem;
 }
 .replybox .reply__list {
+  position: relative;
   width: 100%;
   margin-bottom: 5.5rem;
   padding: 2rem 6rem;
@@ -165,7 +167,7 @@
   */
 }
 .replybox .reply__paging > li {
-  display:inline-block;vertical-align:bottom;margin:0 0.4rem;
+  display:inline-block;vertical-align:bottom;margin:0 1.2rem;
   width: 8.4rem;
   height: 8.4rem;
  }
@@ -228,7 +230,7 @@
   line-height: 4.4rem;
 }
 .notice__info > dd {
-  font-weight: 300;
+  font-weight: bold;
   font-size: 2.6rem;
   color: #ada8a5;
   letter-spacing: -0.4px;
@@ -373,12 +375,38 @@
   background: url(/assets/images/loader_obj.png) center center no-repeat;
   background-size: contain;
 }
+.spinner {
+  margin: 0 auto 50px;
+  width: 100%;
+  text-align: center;
+}
 .quiz__loading .spinner {
   margin: 0 auto 50px;
   width: 100%;
   text-align: center;
 }
-.quiz__loading .spinner > div {
+.pageLoader .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.reply_loader {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+.reply_loader .dimmed {
+  border-radius: 2rem;
+  background-color:rgba(0,0,0,.15)
+}
+.reply_loader .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.spinner > div {
   width: 30px;
   height: 30px;
   margin: 0 15px;
@@ -388,11 +416,11 @@
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
-.quiz__loading .spinner .bounce1 {
+.spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.quiz__loading .spinner .bounce2 {
+.spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
@@ -450,11 +478,15 @@
   box-sizing: border-box;
   max-width:570px;
 }
+.layer.on {
+  pointer-events: none;
+}
 .layer.on .layer__inner {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
   opacity: 1;
+  pointer-events: all;
 }
 .layer .layer__head {
   position: relative;
@@ -481,6 +513,10 @@
   background-size: 65%;
 }
 .layer .layer__body .quizbox .quiz__swiper {
+  overflow: hidden;
+  padding-bottom:30px;
+}
+.layer .layer__body .quizbox .quiz__wrap {
   overflow: hidden;
   padding-bottom:30px;
 }
@@ -658,12 +694,12 @@ text-align:center;margin-bottom:15px;
   background-clip: padding-box;
 }
 .layer .layer__body .privacybox .form_container {
-  padding: 30px 40px;
+  padding: 8.8rem 6rem 8.8rem 9rem;
 }
 .layer .layer__body .privacybox .form_container .info_msg .tx_tit {
   display: block;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 3.4rem;
   color: #933d17;
   letter-spacing: -0.2rem;
 }
@@ -672,7 +708,7 @@ text-align:center;margin-bottom:15px;
   overflow: hidden;
   overflow-y: auto;
   max-height: 35.4rem;
-  padding: 25px;padding-left:0;
+  padding: 4rem;
   border: 1px solid #bebebe;
   background-color: #f8f6f6;
   list-style-type: decimal;
@@ -680,10 +716,10 @@ text-align:center;margin-bottom:15px;
 .layer .layer__body .privacybox .form_container .info_msg .tx_msg > li {
   display: block;
   position: relative;
-  padding-left: 2rem;
-  font-size: 2rem;
-  line-height: 3rem;
-  margin-bottom: 1.5rem;
+  padding-left: 2.7rem;
+  font-size: 2.7rem;
+  line-height: 4rem;
+  margin-bottom: 4rem;
   letter-spacing: -0.2rem;
 }
 .layer .layer__body .privacybox .form_container .info_msg .tx_msg > li::marker {
@@ -692,12 +728,12 @@ text-align:center;margin-bottom:15px;
   top: 0;
   left: 0;
 }
-.layer .layer__body .privacybox .form_container .info_msg .block-ipt {padding:1rem 0 2rem 0;}
-.layer .layer__body .privacybox .form_container .info_msg .block-ipt label {color:#756e6e;font-size:2rem;}
+.layer .layer__body .privacybox .form_container .info_msg .block-ipt {padding:2rem 0 3rem 0;}
+.layer .layer__body .privacybox .form_container .info_msg .block-ipt label {color:#756e6e;font-size:2.5rem;}
 .layer .layer__body .privacybox .form_container .info_msg .block-ipt .ipt-chkbox {width:2.5rem;height:2.5rem;margin-left:0.5rem;}
 .layer .layer__body .privacybox .form_row {
   display: block;padding-left:31%;
-  position: relative;min-height:5rem;margin-bottom:1rem;
+  position: relative;min-height:9rem;margin-bottom:2rem;
 }
 .layer .layer__body .privacybox .form_row + .form_row {
 
@@ -713,17 +749,17 @@ text-align:center;margin-bottom:15px;
   width:28.5%;
   background:#c4e3ce;
   text-align:center;
-  font-size:2rem;
+  font-size:3rem;
   color:#256e37;
   letter-spacing:-0.2rem;
-  height:5rem;
-  line-height:5rem;
+  height:8rem;
+  line-height:8rem;
 }
-.layer .layer__body .privacybox .form_row .ipt-text {border:1px solid #bebebe;height:5rem;font-size:2rem;margin-top:1rem;display:block;width:100%;box-sizing:border-box;text-align:left;padding:0 5%;}
+.layer .layer__body .privacybox .form_row .ipt-text {border:1px solid #bebebe;height:8rem;font-size:3rem;margin-top:1rem;display:block;width:100%;box-sizing:border-box;text-align:left;padding:0 5%;}
 .layer .layer__body .privacybox .form_row .ipt-text:first-child {margin:0;}
-.layer .layer__body .privacybox .form_row .ipt-text-zip {width:40%;text-align:center;font-size:2rem;}
-.layer .layer__body .privacybox .form_row .ipt-text-zip::placeholder {font-size:2rem;}
-.layer .layer__body .privacybox .form_row .tx_msg {font-size:1.7rem;color:#756e6e;margin-top:1rem;}
+.layer .layer__body .privacybox .form_row .ipt-text-zip {width:35%;text-align:center;font-size:3rem;}
+.layer .layer__body .privacybox .form_row .ipt-text-zip::placeholder {font-size:3rem;}
+.layer .layer__body .privacybox .form_row .tx_msg {font-size:2.5rem;color:#756e6e;margin-top:1rem;}
 .layer .layer__body .privacybox .form_row .tx_label .ico_q {
   display: inline-block;
   position: relative;
@@ -901,7 +937,7 @@ text-align:center;margin-bottom:15px;
 .layer .layer__body .privacybox .btn_row {
   display: block;text-align:center;
 }
-.layer .layer__body .privacybox .form_row+.btn_row {margin-top:4rem;}
+.layer .layer__body .privacybox .form_row+.btn_row {margin-top:6rem;}
 .layer .layer__body .privacybox .btn_row .btn-joinus {
   display: block;
   width: 100%;
@@ -957,8 +993,8 @@ text-align:center;margin-bottom:15px;
 
 @media only screen and (max-width: 1279px) {
   #header, .event01:after {
-    /*height: auto;
-    background: none;*/
+    height: auto;
+    background: none;
   }
 
 }
@@ -999,18 +1035,13 @@ text-align:center;margin-bottom:15px;
   background: transparent url(/assets/images/btn_lay_close.png) no-repeat;
   background-size: 7.5rem;
 }
-  .replybox .reply__list {padding:3rem 6rem;height:47.6rem;}
+  .replybox .reply__list {position:relative;padding:3rem 6rem;height:47.6rem;}
   .replybox .reply__list > ul li > p {font-size:3.2rem;}
   .notice__info > dt,
   .notice__info > dd {font-size:3.5rem;line-height:5rem;}
   .layer .layer__body .privacybox .form_container .info_msg .tx_tit {margin-bottom:2rem;font-size: 4.2rem;}
-  .layer .layer__body .privacybox .form_container .info_msg .tx_msg {
-  padding: 4rem;
-}
   .layer .layer__body .privacybox .form_container .info_msg .tx_msg > li {font-size:3.6rem;line-height:4.9rem;margin-bottom:4.9rem;}
   .layer .layer__body .privacybox .form_container .info_msg .block-ipt label {font-size:3.5rem;}
-  .layer .layer__body .privacybox .form_row .ipt-text-zip {text-align:center;font-size:4.7rem;}
-  .layer .layer__body .privacybox .form_row .ipt-text-zip::placeholder {font-size:3rem;}
   .layer .layer__body .privacybox .form_row .tx_msg {font-size:3rem;}
   .layer .layer__body .quizbox .quiz__swiper {
 	  overflow: hidden;
@@ -1046,12 +1077,6 @@ text-align:center;margin-bottom:15px;
 	}
 	.layer .layer__body .sharebox .share__body .row {padding-bottom:45px;}
 	.layer .layer__body .sharebox .share__body .row--two .tx_two {margin-top:-10%;}
-	.layer .layer__body .privacybox .form_container {
-	  padding: 8.8rem 6rem 8.8rem 9rem;
-	}
-	.replybox .reply__paging > li {margin:0 1.2rem;}
-	.layer .layer__body .privacybox .form_row+.btn_row {margin-top:6rem;}
-	.layer .layer__body .privacybox .form_container .info_msg .block-ipt {padding: 2rem 0 3rem 0;}
 }
 @media only screen and (max-width: 400px) {
   .notice__info > dt,
