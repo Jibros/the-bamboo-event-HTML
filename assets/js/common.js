@@ -37,6 +37,7 @@ $(function() {
         totalPoint = [];
 
     // 퀴즈 진행
+    let quizSwiper;
     function quizPlayFunc() {
         // 퀴즈 스와이퍼 생성 및 초기화
         quizSwiper = new Swiper(".quiz__swiper", {
